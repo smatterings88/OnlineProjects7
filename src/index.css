@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-secondary-900 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-secondary-900;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl xl:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl xl:text-5xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl leading-tight;
+  }
+  
+  p {
+    @apply leading-relaxed text-secondary-600;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-content px-4 md:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center py-3 px-6 font-medium rounded-lg transition-all duration-300 text-center;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-50 focus:ring-4 focus:ring-primary-100 transform hover:-translate-y-0.5;
+  }
+  
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-secondary-200 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-lg hover:-translate-y-1 hover:border-primary-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-secondary-200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-transparent transition-all duration-200;
+  }
+
+  .select-field {
+    @apply w-full px-4 py-3 rounded-lg border border-secondary-200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-transparent transition-all duration-200 bg-white appearance-none;
+  }
+
+  .textarea-field {
+    @apply w-full px-4 py-3 rounded-lg border border-secondary-200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-transparent transition-all duration-200 resize-none;
+  }
+
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply text-xl font-bold mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc list-inside mb-4;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose a {
+    @apply text-primary-600 hover:underline;
+  }
+}
